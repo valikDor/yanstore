@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/unslider.css" type="text/css">
+		<!-- <link rel="stylesheet" href="css/unslider-dots.css" type="text/css"> -->
+	</head>
+	<body>
+		<header>
+			<div class="header-top">
+				<div class="container">
+					<div id="header-logo" class="logo">
+						<a href="#"> <img src="image/logo.png" alt=""></a>
+					</div>
+					<div id="category-menu" class="menu">
+						<ul>
+							<li class="menu-item">
+								<a href="" >Женщинам
+									<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								</a>
+								<ul class="submenu">
+									<li class="submenu-item"></li>
+								</ul>
+							</li>
+						</ul>
+						<ul>
+							<li class="menu-item">
+								<a href="" >Мужчинам
+									<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								</a>
+								<ul class="submenu">
+									<li class="submenu-item"></li>
+								</ul>
+							</li>
+						</ul>
+						<ul>
+							<li class="menu-item button">
+								<a href="">Распродажа</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div id="right-menu" class="menu right-menu">
+						<ul>
+							<li class="menu-item right-menu-item">
+								<div class="search" id="header-search">
+									<input type="search" id="menu-search" placeholder="Что ищите?">
+									<label class="search" for="menu-search">
+										<a href="">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</a>
+									</label>
+								</div>
+							</li>
+							<li class="menu-item right-menu-item">
+								<a href="">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li class="menu-item right-menu-item">
+								<a href="">
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="brends">
+				<div class="container">
+					<span class="brends-title">Бренды:</span>
+					<ul id="brendsList">
+					</ul>
+				</div>
+			</div>
+			<div class="info">
+				<div class="container">
+					<ul>
+						<li class="info-item phone">
+							<a href="">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								+7 966 003 09 90
+							</a>
+						</li>
+						<li class="info-item">
+							<a href="">
+								О нас
+							</a>
+						</li>
+						<li class="info-item">
+							<a href="">
+								Доставка
+							</a>
+						</li>
+						<li class="info-item">
+							<a href="">
+								Оплата
+							</a>
+						</li>
+						<li class="info-item">
+							<a href="">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</header>
+		<script src="js/brends.js"></script>
+		<div class="slider-wrap" id="slider">
+			<div class="container">
+				<div id="landing-slider">
+					<ul>
+						<li>
+							<img src="image/slide1.png" alt="">
+							<div class="description">
+								<div class="title">
+									
+								</div>
+								<a href="#" class="button"></a>
+							</div>
+						</li>
+						<li>
+							<img src="image/slide2.png" alt="">
+							<div class="description">
+								<div class="title">
+									<span class="percent">
+										50%
+									</span></br>
+									<span class="section">
+										на весь раздел
+									</span></br>
+									<span class="section-name" >
+										Макияж
+									</span>
+								</div>
+								<a href="#" class="button"></a>
+							</div>
+						</li>
+						<li>
+							<img src="image/slide3.png" alt="">
+							<div class="description">
+								<div class="title">
+									<span class="percent">
+										30%
+									</span></br>
+									<span class="section">
+										на весь раздел
+									</span></br>
+									<span class="section-name" >
+										Макияж
+									</span>
+								</div>
+								<a href="#" class="button"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div >
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/unslider-min.js"></script>
+		<script>
+		jQuery(document).ready(function($) {
+			var slider = $('#landing-slider').unslider({
+													autoplay: true,
+													delay: 5000,
+													animation: "fade",
+													arrows:false
+												});
+			var data = slider.data('unslider');
+			$('#landing-slider').hover(
+				function() {
+					data.stop();
+				},
+				function() {
+					data.start();
+				}
+			);
+			
+		});
+		</script>
+	</body>
+</html>
